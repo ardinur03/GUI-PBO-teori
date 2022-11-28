@@ -18,9 +18,9 @@ public class DataPlainText {
         this.dataOrderTemp = "";
     }
     
-    public void loadDatabase(){
+    public void loadDataPesanan(){
         try{
-            FileReader file = new FileReader("src/database/plainDataOrder.txt");
+            FileReader file = new FileReader("src/my_package/data-pesanan.txt");
             try (BufferedReader reader = new BufferedReader(file)) {
                 String line = null;
                 this.setDataOrderTemp("");
@@ -33,9 +33,9 @@ public class DataPlainText {
         } 
     }
     
-    public void updateDatabase(){
+    public void updateDataPesanan(){
         try{
-            try (BufferedWriter out = new BufferedWriter( new FileWriter("src/database/plainDataOrder.txt", true))) {
+            try (BufferedWriter out = new BufferedWriter( new FileWriter("src/my_package/data-pesanan.txt", true))) {
                 out.write("\n" + getDataOrderTemp());
             }
         }catch(IOException e){

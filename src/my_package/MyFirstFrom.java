@@ -102,6 +102,8 @@ public class MyFirstFrom extends javax.swing.JFrame {
         Field_Data = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         BTN_clear = new javax.swing.JButton();
+        saveData = new javax.swing.JButton();
+        LoadDataPlain = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 255));
@@ -283,14 +285,15 @@ public class MyFirstFrom extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(471, 471, 471))
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(471, 471, 471))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,8 +301,8 @@ public class MyFirstFrom extends javax.swing.JFrame {
                 .addGap(0, 15, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, -1, -1));
@@ -310,7 +313,23 @@ public class MyFirstFrom extends javax.swing.JFrame {
                 BTN_clearActionPerformed(evt);
             }
         });
-        getContentPane().add(BTN_clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 69, -1));
+        getContentPane().add(BTN_clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 69, -1));
+
+        saveData.setText("Simpan Text");
+        saveData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveDataActionPerformed(evt);
+            }
+        });
+        getContentPane().add(saveData, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
+
+        LoadDataPlain.setText("Load Data Pesanan");
+        LoadDataPlain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoadDataPlainActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LoadDataPlain, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 580, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -376,6 +395,33 @@ public class MyFirstFrom extends javax.swing.JFrame {
         Field_Data.setText("");
         dataPlainText.setDataOrderTemp("");
     }//GEN-LAST:event_BTN_clearActionPerformed
+
+    private void saveDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveDataActionPerformed
+        String message;
+        if(dataPlainText.getDataOrderTemp().length() != 0){
+            dataPlainText.updateDataPesanan();
+            message = "Data Tersimpan!";
+        } else{
+            if(Field_Data.getText().equals("")){
+                message = "Data order kosong!";
+            } else{
+                message = "Silahkan pilih button clear terlebih dahulu!";
+            }
+        }
+        JOptionPane.showMessageDialog(null, message);
+    }//GEN-LAST:event_saveDataActionPerformed
+
+    private void LoadDataPlainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadDataPlainActionPerformed
+        String message;
+        dataPlainText.loadDataPesanan();
+        if(dataPlainText.getDataOrderTemp().equals("")){
+            message = "Belum ada data pada file!";
+            JOptionPane.showMessageDialog(null, message);
+        } else {
+            Field_Data.setText(dataPlainText.getDataOrderTemp());
+            dataPlainText.setDataOrderTemp("");
+        }
+    }//GEN-LAST:event_LoadDataPlainActionPerformed
     
     
     /**
@@ -424,6 +470,7 @@ public class MyFirstFrom extends javax.swing.JFrame {
     private javax.swing.JTextField Field_Nama;
     private javax.swing.JTextField Field_No;
     private javax.swing.JTextArea Field_Total;
+    private javax.swing.JButton LoadDataPlain;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -438,6 +485,7 @@ public class MyFirstFrom extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JButton saveData;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

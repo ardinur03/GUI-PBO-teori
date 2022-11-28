@@ -1,8 +1,6 @@
-
-
-    Nama      : Angga
-    Alamat    : Bandung
-    No Telp.  : 123
+    Nama      : Muhamad Ardi Nur Insan
+    Alamat    : Jalan suka suka
+    No Telp.  : 1234567
     ---------------------------------------------------------- 
     Pesanan : 
     Steak : 50000
@@ -12,9 +10,9 @@
     Total Bayar   : Rp170000
 
 
-    Nama      : Suwarko
-    Alamat    : Margahayu
-    No Telp.  : 123
+    Nama      : Anonymous
+    Alamat    : Jalan Cimahi
+    No Telp.  : 12345678
     ---------------------------------------------------------- 
     Pesanan : 
     Steak : 50000
@@ -24,8 +22,8 @@
     Total Bayar   : Rp170000
 
 
-    Nama      : asdasd
-    Alamat    : asdasd
+    Nama      : Deddy Cahyadi
+    Alamat    : Jalanin ja gak sih
     No Telp.  : 123123
     ---------------------------------------------------------- 
     Pesanan : 
@@ -36,8 +34,8 @@
     Total Bayar   : Rp170000
 
 
-    Nama      : Cahyono
-    Alamat    : Cibiru
+    Nama      : Sukijan
+    Alamat    : Jalan Raya
     No Telp.  : 227830191
     ---------------------------------------------------------- 
     Pesanan : 
@@ -48,8 +46,8 @@
     Total Bayar   : Rp195000
 
 
-    Nama      : Dadang
-    Alamat    : Cijambe
+    Nama      : Dudung
+    Alamat    : Ciwaruga
     No Telp.  : 227830110
     ---------------------------------------------------------- 
     Pesanan : 
@@ -60,9 +58,9 @@
     Total Bayar   : Rp195000
 
 
-    Nama      : Muhamad Ardi Nur Insan
-    Alamat    : Jalan Raya Contong
-    No Telp.  : 123456789
+    Nama      : Hilman
+    Alamat    : Jalan Ciwa
+    No Telp.  : 1232322
     ---------------------------------------------------------- 
     Pesanan : 
     Steak : 75000
@@ -70,3 +68,34 @@
     Pizza : 65000
     ---------------------------------------------------------- 
     Total Bayar   : Rp195000
+
+
+    Nama      : sas
+    Alamat    : sa
+    No Telp.  : 212121
+    ---------------------------------------------------------- 
+    Pesanan : 
+    Steak : 75000
+    ---------------------------------------------------------- 
+    Total Bayar   : Rp75000
+
+
+    Nama      : dsdds
+    Alamat    : dsd
+    No Telp.  : 1211323
+    ---------------------------------------------------------- 
+    Pesanan : 
+    Pizza : 65000
+    ---------------------------------------------------------- 
+    Total Bayar   : Rp65000
+
+
+    Nama      : Ardi Baru
+    Alamat    : Jalanan Meriah
+    No Telp.  : 1234564
+    ---------------------------------------------------------- 
+    Pesanan : 
+    Steak : 75000
+    Spaghetti : 55000
+    ---------------------------------------------------------- 
+    Total Bayar   : Rp130000
